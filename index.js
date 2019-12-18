@@ -77,7 +77,7 @@ export const Switch = ({ children, location }) => {
         ? matcher(element.props.path, location || originalLocation)
         : [true, {}]
       )[0]))
-  return cloneElement(element, { match });
+  return cloneElement(element.component?h(element.component):element, { match });
 };
 
 export const Redirect = props => {
