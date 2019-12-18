@@ -68,7 +68,7 @@ export const Switch = ({ children, location }) => {
   const { matcher } = useRouter();
   const [originalLocation] = useLocation();
   let match;
-  const match = React.Children.toArray(children).find(el=> isValidElement(el) &&
+  const element = React.Children.toArray(children).find(el=> isValidElement(el) &&
       // we don't require an element to be of type Route,
       // but we do require it to contain a truthy `path` prop.
       // this allows to use different components that wrap Route
